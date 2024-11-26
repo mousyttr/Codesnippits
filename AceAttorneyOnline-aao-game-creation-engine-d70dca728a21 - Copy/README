@@ -1,0 +1,42 @@
+This repository contains the AAO code base,
+as well as files to set up a minimalistic test environment.
+
+From this repository alone, you can run two flavours of AAO.
+
+1. Mocked install - Test all operations that can be performed by a single user
+------------------------------------------------------------------------------
+
+Requirements :
+	An HTTP server configured to execute PHP, along with the PHP SQLite support module.
+
+Scope of test :
+	Game creation, edition and playthrough : all trial management operations that can be done by a user alone.
+	No user account management, hence no collaboration, etc.
+	
+Instructions :
+	- Clone this AAO repository in a directory accessible through your webserver.
+	- Copy /_test/mocked_install/config.php to /config.php
+	- Access the /index.php page through your webserver.
+
+Also, in order to avoid including the modified db.sqlite into commits by mistake, it is recommended that you run 
+git update-index --assume-unchanged _test/mocked_install/phpbb_files/db.sqlite
+
+
+2. Integrated install - Test all AAO features
+---------------------------------------------
+
+Requirements :
+	An HTTP server configured to execute PHP
+	A MySQL database server
+
+Scope of test :
+	About all of the AAO features, including user account management.
+
+Instructions :
+	- Download phpBB3 ( https://www.phpbb.com/downloads/3.3 ) , and extract it into a "forum" directory accessible through your webserver.
+	- Follow through the phpBB3 install procedure.
+	- Clone this AAO repository in a directory accessible through your webserver. If relevant, make sure it is part of the same virtual host as the forum.
+	- Create the AAO tables in the database by running the SQL script _test/test_install/db_build.sql in the same database as the forum install.
+	- Copy /_test/test_install/config.php to /config.php
+	- In this /config.php file, set the 'forum_path' property as a relative path from this file to the forum installation's root (the folder containing viewtopic.php, etc.)
+	- Access the /index.php page through your webserver.
