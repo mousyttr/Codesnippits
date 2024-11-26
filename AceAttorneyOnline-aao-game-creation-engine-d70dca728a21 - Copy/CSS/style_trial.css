@@ -1,0 +1,211 @@
+/* Trial information */
+
+.trial
+{
+	display: block;
+	
+	border: thin solid lightgrey;
+	border-radius: 0.3em;
+	
+	background: white;
+	
+	font-size: 14px;
+	text-decoration: none;
+}
+
+.trial.left > *
+{
+	display: inline-block;
+}
+
+div.trial-card,
+.more-info
+{
+	width: 22rem;
+	padding: 0.35em;
+}
+
+/* We want to use all the space when in portrait mode */
+@media (orientation: portrait) {
+	.trial.left > *
+	{
+		display: block;
+	}
+	div.trial-card, .more-info
+	{
+		width: auto;
+	}
+	.trial.top
+	{
+		width: 100%;
+	}
+}
+
+/* Main data trial card */
+
+div.trial-card
+{
+	position: relative;
+
+	border-radius: 0.3em;
+	box-shadow: 0 0 0.35em grey;
+	
+	background-color: #F0F0F0;
+	background-image: linear-gradient(white, rgba(255,255,255,0));
+}
+
+.trial.top div.trial-card
+{
+	border-radius: 0.3em 0.3em 0 0;
+
+}
+
+.trial.left div.trial-card
+{
+	border-radius: 0.3em 0 0 0.3em;
+}
+
+div.trial-card .featured-icon
+{
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 0.35em;
+	
+	font-size: 18px;
+	color: #ffd314;
+}
+
+div.trial-card a.featured-icon:hover
+{
+	color: #fff376;
+}
+
+div.trial-card a.featured-icon:active
+{
+	color: #e0b610;
+}
+
+div.trial-card h4
+{
+	margin: 0 0 0.35em 0;
+	padding: 0 0 0.35em 0;
+	overflow: hidden;
+	
+	border-bottom: 1px dashed grey;
+	
+	font-family: Georgia, serif;
+	font-size: 18px;
+	white-space: nowrap;
+}
+
+div.trialCard_buttons a
+{
+	display: block;
+	width: 30%;
+	margin-top: 0.35em;
+	text-align: center;
+	font-size: 14px;
+}
+
+div.trial-card a.play::before
+{
+	content: "→";
+	display: block;
+	float: left;
+}
+
+div.trial-card div.trialCard_buttons
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+/* More trial information */
+
+.trial .more-info
+{
+	
+}
+
+/* Trial data lists */
+
+dl.trial-data
+{
+	margin: 0;
+	font-family: 'Open Sans', Arial, sans-serif;
+	color: black;
+}
+
+dl.trial-data dt
+{
+	float: left;
+	width: 35%;
+	
+	font: inherit;
+	color: inherit;
+}
+
+dl.trial-data dt::after
+{
+	content: ":";
+}
+
+dl.trial-data dd
+{
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+dl.trial-data dd.link-list a.user::before
+{
+	content: ", ";
+}
+
+dl.trial-data dd.link-list a.user:first-child::before
+{
+	content: "";
+}
+
+dl.trial-data dd.link-list a.delete.button
+{
+	height: 1em;
+	width: 1em;
+	padding: 0;
+	
+	background: white;
+	line-height: 0.7em;
+	text-align: center;
+	color: red;
+	font-weight: bold;
+}
+
+/* Trial lists */
+
+.trial-list
+{
+	padding: 0;
+	list-style: none;
+}
+
+/* Ordered list : list layout */
+
+ol.trial-list > li
+{
+	margin: 0.7em;
+}
+
+/* Unordered list : grid layout */
+
+ul.trial-list > li
+{
+	display: inline-block;
+	
+	vertical-align: top;
+	margin: 0.35em;
+}
+
+
+

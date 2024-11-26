@@ -1,0 +1,94 @@
+/*
+Styling court records elements
+*/
+
+@charset "UTF-8";
+
+/*Evidence display*/
+.evidence_display
+{
+	position: relative;
+	height: 130px;
+}
+
+.evidence_display > .summary
+{
+    position: relative;
+	height: 70px;
+    width: 218px;
+    margin: 5px auto 2px;
+    padding: 0 19px;
+	
+	/*border-bottom: 6px solid #CECECE;
+	border-top: 6px solid #CECECE;
+	
+	background: #847342;*/
+}
+
+.evidence_display > .summary > img
+{
+	position: absolute;
+	bottom: 0;
+	left: 18px;
+	right: 168px;
+	top: 0;
+	
+	height: 70px;
+	width: 70px;
+}
+
+.evidence_display > .summary > .name
+{
+    display: block;
+    position: absolute;
+    left: 89px;
+    top: 0;
+	
+	height: 17px;
+    width: 144px;
+    padding: 0;
+	
+	/*border: 2px ridge lightgrey;
+	border-bottom: 0;
+	
+    background: #393939;
+	
+	text-align: center;
+    color: #FFAD18;
+    font: 12px sans-serif;*/
+}
+
+.evidence_display > .summary > .civil_status
+{
+    position: absolute;
+    left: 89px;
+    top: 18px;
+	height: 48px;
+    width: 139px;
+    padding: 1px 0 0 5px;
+	
+    /*border: 2px ridge lightgrey;
+	border-top: 0;
+	
+	background: #9CCE94;
+    font: 12px sans-serif;*/
+	
+	resize: none;
+}
+
+.evidence_display > .description
+{
+	display: block;
+    height: 42px;
+    width: 234px;
+    margin: 0 auto 5px;
+    padding: 1px 2px;
+	
+	/*border: 1px solid #735A42;
+    
+	background: #847342;
+    color: white;
+    font: 10px sans-serif;*/
+	
+	resize: none;
+}

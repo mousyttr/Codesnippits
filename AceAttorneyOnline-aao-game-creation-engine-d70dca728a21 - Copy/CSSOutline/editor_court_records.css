@@ -1,0 +1,66 @@
+/*
+Style for the CR tabs
+*/
+
+@charset "UTF-8";
+
+/* Style of a profile or evidence row container */
+.cr-cell
+{
+	display: inline-block;
+	height: 320px !important;
+	margin: 5px 0;
+}
+
+.cr-cell > div.cr-elt
+{
+	-moz-border-radius: 4px 4px 4px 4px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	
+	display: inline-block;
+	position: relative;
+	box-sizing: border-box;
+	height: 100%;
+	width: 268px;
+	padding: 5px;
+	
+	vertical-align: top;
+	
+	/*border: 1px solid lightgrey;
+	border-radius: 4px 4px 4px 4px;
+    background: none repeat scroll 0 0 #F8F2ED;*/
+}
+
+.cr-cell > div.cr-elt hr
+{
+	/*border: 0;
+	border-top: solid 1px lightgrey;*/
+}
+
+.cr-cell > div.cr-elt > div > label
+{
+	display: block;
+}
+
+.cr-cell > div.cr-elt > div > label > *
+{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	
+	display: inline-block;
+	box-sizing: border-box;
+	width: 50%;
+	
+	font-size: 14px;
+}
+
+.cr-cell > div.cr-elt > div > button
+{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	
+	display: block;
+	box-sizing: border-box;
+	width: 100%;
+}

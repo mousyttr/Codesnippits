@@ -1,0 +1,168 @@
+@charset "UTF-8";
+
+/*
+AA FONT DEFINITION
+*/
+
+@font-face 
+{
+	font-family:aaDialogueText;
+	src: url("PWExtended.woff") format("woff"),
+	    url("PWExtended.ttf") format("truetype");
+}
+
+/*
+BACKGROUND AND CHARACTER POSITIONING
+*/
+
+/* The screen area */
+div.top_screen
+{
+	position: relative;
+	width: 256px;
+	height: 192px;
+	overflow: hidden;
+}
+
+/* Disable transitions for all */
+*
+{
+	transition: 0;
+	-moz-transition: 0; 
+	-webkit-transition: 0;
+}
+
+/* Except for elements with the transitioning class */
+.transitioning
+{
+	transition: 0.5s;
+	-moz-transition: 0.5s; 
+	-webkit-transition: 0.5s;
+}
+
+.mirrored
+{
+	transform: scaleX(-1);
+	-moz-transform: scaleX(-1); /* Gecko */
+	-webkit-transform: scaleX(-1); /* webkit */
+}
+
+/* The div containing the scene */
+div.top_screen > div.ts_scene_outer
+{
+	position: absolute;
+	left: 0; /* left value will be determined by the screen position align */
+}
+
+div.top_screen > div.ts_scene_outer > div.ts_scene_inner
+{
+	position: relative;
+	left: 0; /* left value will be determined by the screen position shift */
+}
+
+/* The background of the scene */
+div.top_screen > div.ts_scene_outer > div.ts_scene_inner > .ts_background
+{
+	height: 192px;
+	/* width will be determined by the picture if img element, or manually */
+	
+	z-index: 0;
+}
+
+/* Background objects */
+div.top_screen > div.ts_scene_outer > div.ts_scene_inner > div.ts_back
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	
+	z-index: 1;
+}
+
+/* Foreground object */
+div.top_screen > div.ts_scene_outer > div.ts_scene_inner > div.ts_front
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	
+	z-index: 3;
+}
+
+/* Character images */
+div.top_screen > div.ts_scene_outer > div.ts_scene_inner > div.ts_char
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	
+	z-index: 2;
+	
+	/* text-align value will be determined by character position align */
+}
+
+ div.top_screen > div.ts_scene_outer > div.ts_scene_inner > div.ts_char > img
+ {
+	position: absolute;
+	/* left value will be determined by the character position shift */
+	
+	height: 192px;
+	display: block;
+ }
+
+
+/*
+TEXTBOX STYLE
+*/
+
+div.textbox
+{
+	position: relative;
+	width: 256px;
+	height: 73px;
+}
+
+div.textbox .name
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	
+	height:12px;
+	min-width:44px;
+	padding:0 2px;
+	overflow: hidden;
+	
+	/*border:2px ridge rgba(136,136,136,0.75);
+	-moz-border-radius:3px;
+	border-radius:3px;
+	
+	background:rgba(27,34,108,0.75);
+	
+	white-space:nowrap;
+	font-size:10px;
+	color:white;*/
+}
+
+div.textbox .dialogue
+{
+	position: absolute;
+	left: 0;
+	top: 12px;
+	width:244px; min-height:52px;
+	padding:2px 2px 2px 6px;
+	
+	/*border:2px ridge rgba(136,136,136,0.75);
+	border-radius:3px;
+	-moz-border-radius:3px;
+	
+	resize:none;
+	background:rgba(0,0,0,0.75);
+	
+	font:12px aaDialogueText, sans-serif;
+	text-align:start;
+	line-height:16px;
+	color:white;*/
+}
+

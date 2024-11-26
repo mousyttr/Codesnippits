@@ -1,0 +1,110 @@
+/*
+Style for the CR tabs
+*/
+
+@charset "UTF-8";
+
+/* Style of a profile or evidence row container */
+.cr-cell
+{
+	display: inline-block;
+	height: 320px !important;
+	margin: 5px 0;
+}
+
+.cr-cell > .insert > span
+{
+	width: 308px;
+}
+
+.cr-cell > .last.insert
+{
+	width: 268px;
+}
+
+.cr-elt > div.cr-elt-actions-box 
+{
+	position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 10;
+}
+
+.cr-elt > div.cr-elt-actions-box > button
+{
+	position: static;
+	margin: 0;
+    border-right: medium lightgrey;
+    border-top: medium lightgrey;
+}
+
+.cr-elt > div.cr-elt-actions-box > button.box-delete
+{
+    border-radius: 0 3px 0 0px;
+}
+
+.cr-elt > div.cr-elt-actions-box > button.box-clone
+{
+    border-radius: 0 0px 0 4px;
+}
+
+.cr-cell > div.cr-elt
+{
+	display: inline-block;
+	position: relative;
+	box-sizing: border-box;
+	height: 100%;
+	width: 268px;
+	padding: 5px;
+	padding-top: 1.5em;
+	
+	vertical-align: top;
+	
+	border: 1px solid lightgrey;
+	border-radius: 4px 4px 4px 4px;
+	background: none repeat scroll 0 0 #F8F2ED;
+}
+
+.cr-cell > div.cr-elt hr
+{
+	border: 0;
+	border-top: solid 1px lightgrey;
+	margin: 4px;
+}
+
+.cr-cell > div.cr-elt label
+{
+	font-size: 14px;
+}
+
+.full_editor_content > div.icon_div
+{
+	position: relative;
+	height: 75px;
+	
+	padding-left: 75px;
+}
+
+.full_editor_content > div.icon_div > img
+{
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 70px;
+	width: 70px;
+}
+
+.full_editor_content > div.icon_div label > *
+{
+	width: auto;
+}
+
+.full_editor_content .custom_sprites_table img
+{
+	max-width: 100%;
+}
+
+.full_editor_content .custom_sprites_fields td
+{
+	vertical-align: top;
+}

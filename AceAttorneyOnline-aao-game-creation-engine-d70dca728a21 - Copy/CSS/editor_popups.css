@@ -1,0 +1,50 @@
+/*
+Style for the popups tab
+*/
+
+@charset "UTF-8";
+
+/* Style of a popup row container */
+.popups-cell
+{
+	display: inline-block;
+	height: 310px !important;
+	margin: 5px 0;
+}
+
+.popups-cell > .insert > span
+{
+	width: 300px;
+}
+
+.popups-cell > .last.insert
+{
+	width: 268px;
+}
+
+.popups-cell > div.popups-elt
+{
+	display: inline-block;
+	position: relative;
+	box-sizing: border-box;
+	height: 100%;
+	width: 268px;
+	padding: 5px;
+	
+	vertical-align: top;
+	
+	border: 1px solid lightgrey;
+	border-radius: 4px 4px 4px 4px;
+	background: none repeat scroll 0 0 #F8F2ED;
+}
+
+.popups-cell > div.popups-elt label
+{
+	font-size: 14px;
+}
+
+.popups-cell .popup-preview
+{
+	width: 256px;
+	height: 192px;
+}

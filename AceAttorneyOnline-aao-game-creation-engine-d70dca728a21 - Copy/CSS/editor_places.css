@@ -1,0 +1,68 @@
+/*
+Style for the places tab
+*/
+
+@charset "UTF-8";
+
+/* Style of a place row container */
+.places-cell
+{
+	display: inline-block;
+	height: 250px !important;
+	margin: 5px 0;
+}
+
+.places-cell > .insert > span
+{
+	width: 237px;
+}
+
+.places-cell > .last.insert
+{
+	width: 268px;
+}
+
+.places-cell > div.places-elt
+{
+	display: inline-block;
+	position: relative;
+	box-sizing: border-box;
+	height: 100%;
+	width: 268px;
+	padding: 5px;
+	
+	vertical-align: top;
+	
+	border: 1px solid lightgrey;
+	border-radius: 4px 4px 4px 4px;
+	background: none repeat scroll 0 0 #F8F2ED;
+}
+
+.places-cell > div.places-elt .preview-container
+{
+	width: 256px;
+	height: 192px;
+	margin: 0;
+	padding: 0;
+	overflow-x: auto;
+	overflow-y: hidden;
+}
+
+.places-cell > div.places-elt hr
+{
+	border: 0;
+	border-top: solid 1px lightgrey;
+	margin: 4px;
+}
+
+.places-cell > div.places-elt label
+{
+	font-size: 14px;
+}
+
+.places-cell > div.places-elt > div > button
+{
+	display: block;
+	box-sizing: border-box;
+	width: 100%;
+}

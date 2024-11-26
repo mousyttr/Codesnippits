@@ -1,0 +1,59 @@
+/*
+Style for the audio tabs
+*/
+
+@charset "UTF-8";
+
+/* Style of a profile or evidence row container */
+.audio-cell
+{
+	display: inline-block;
+	height: 190px !important;
+	margin: 0.35em 0;
+}
+
+.audio-cell > .insert > span
+{
+	width: 170px;
+}
+
+.audio-cell > .last.insert
+{
+	width: 300px;
+}
+
+.audio-cell > div.audio-elt
+{
+	display: inline-block;
+	position: relative;
+	box-sizing: border-box;
+	height: 100%;
+	width: 300px;
+	padding: 5px;
+	padding-top: 1.5em;
+	
+	vertical-align: top;
+	
+	border: 1px solid lightgrey;
+	border-radius: 4px 4px 4px 4px;
+	background: none repeat scroll 0 0 #F8F2ED;
+}
+
+.audio-cell > div.audio-elt hr
+{
+	border: 0;
+	border-top: solid 1px lightgrey;
+	margin: 4px;
+}
+
+.audio-cell > div.audio-elt label
+{
+	font-size: 14px;
+}
+
+.audio-cell > div.audio-elt > div > button
+{
+	display: block;
+	box-sizing: border-box;
+	width: 100%;
+}

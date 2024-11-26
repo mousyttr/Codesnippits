@@ -1,0 +1,114 @@
+@charset "UTF-8";
+
+aside.searchPanel ul
+{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+aside.searchPanel ul > li
+{
+	text-align: right;
+}
+
+aside.searchPanel ul > li label
+{
+	clear: none;
+	margin-right: 30px;
+}
+
+aside.searchPanel ul > li label > *
+{
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	width: 48%;
+	height: 1.5em;
+	overflow: hidden;
+}
+
+aside.searchPanel ul > li label > *.full_width
+{
+	width: 96%;
+}
+
+aside.searchPanel ul > li label > span
+{
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+aside.searchPanel ul > li label > input
+{
+	border: 1px inset #ccc;
+	vertical-align: top;
+}
+
+aside.searchPanel ul > li input[type=submit],
+aside.searchPanel ul > li .button
+{
+	float: right;
+	width: 25px;
+}
+
+aside.searchPanel .addCriteria h4
+{
+	padding: 2px 10px;
+	margin: 0;
+	border: 1px solid #ccc;
+	border-radius: 0.7em 0.7em 0 0;
+}
+
+aside.searchPanel .addCriteria ul
+{
+	padding: 5px 10px;
+	margin-bottom: 5px;
+	border: 1px solid #ccc;
+	border-top: 0;
+	border-radius: 0 0 0.7em 0.7em;
+}
+
+ol.results
+{
+	margin: 0;
+	padding: 0;
+}
+
+ol.results > li
+{
+	margin: 0.7em 0;
+}
+
+div.pagination a
+{
+    margin: 0 2px;
+    padding: 0 2px;
+    
+    border: thin solid lightgrey;
+    background-color: white;
+    line-height: 1.5em;
+    color: #0077CC;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+div.pagination a:hover {
+    border-color: #44BBFF;
+    background-color: #44BBFF;
+    color: white;
+}
+
+div.pagination a:active {
+    border-color: #003F6C;
+    background-color: #003F6C;
+    color: white;
+}
+
+div.pagination a.current
+{
+    border: thin solid #009EFD;
+    background-color: #009EFD;
+    color: #FFFFFF;
+}

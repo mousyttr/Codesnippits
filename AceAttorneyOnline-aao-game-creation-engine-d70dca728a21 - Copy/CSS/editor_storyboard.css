@@ -1,0 +1,1062 @@
+/*
+Style for the storyboard tab
+*/
+
+@charset "UTF-8";
+
+/* Style of a storyboard row container : fixed dimensions to enable easy calculations in JS */
+.storyboard-row
+{
+	height: 150px !important;
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+	margin: 0 !important;
+}
+
+.storyboard-row > div
+{
+	height: 136px;
+	position: relative;
+	margin: 0 !important;
+	box-sizing: border-box;
+}
+
+/* INSERT ROWS */
+
+section.row-section .storyboard-row > .insert-preset-select,
+section.row-section .storyboard-row > .insert-block-select
+{
+	float: right;
+	height: 10px;
+	width: 19%;
+	margin: 0 0 0 1%;
+	padding: 0;
+	
+	font-size: 10px;
+	text-align: center;
+}
+
+section.row-section .storyboard-row > .insert-preset-select option,
+section.row-section .storyboard-row > .insert-block-select option
+{
+	padding: 0;
+	text-align: left;
+	
+	background: inherit;
+	color: inherit;
+}
+
+section.row-section .storyboard-row > .insert-block-select
+{
+	background: #5F00FD;
+}
+
+section.row-section .storyboard-row > .insert-block-select:hover,
+section.row-section .storyboard-row > .insert-block-select:focus
+{
+	background: #8844FF;
+}
+
+section.row-section .storyboard-row > .insert-block-select:active
+{
+	background: #2D006C;
+}
+
+section.row-section .storyboard-row > * + a.insert
+{
+	width: 80%;
+}
+
+section.row-section .storyboard-row > * + * + a.insert
+{
+	width: 60%;
+}
+
+/* Style of a frame row */
+.frame {
+	position:relative;
+	background:white;
+	border:1px solid lightgrey;
+	border-radius:4px;
+	font-size:small;
+	
+	transition: 0.2s;
+}
+
+.frame.open {
+	background-color:#F0F0F0;
+	background-image:linear-gradient(rgba(255,255,255,0), white);
+	box-shadow:inset 0 0 3px black;
+}
+
+.frame.open a {
+	background:transparent !important;
+	box-shadow:none !important;
+	color:black !important;
+}
+
+.storyboard-row.merged > .frame 
+{
+	margin-bottom:0;
+	border-bottom:1px dashed grey;
+	border-bottom-right-radius:0;
+	border-bottom-left-radius:0;
+}
+
+.frame small { 
+	border-color:lightgrey;
+}
+
+.frame > div,
+.il-default > div {
+	display:inline-block;
+	padding:5px;
+	vertical-align:middle;
+	border-right:thin solid lightgrey;
+	background: inherit;
+}
+
+.frame-dialogue,
+.frame-controls {
+	height:94px;
+}
+
+/*
+.frame a,
+.il-default a {
+	display:block;
+	padding:5px;
+	height:96px;
+	outline:none;
+	background-color:#F0F0F0;
+	background-image:linear-gradient(white, rgba(255,255,255,0));
+	text-align:center;
+	text-decoration:none;
+}
+
+.frame a:hover,
+.frame a:focus,
+.il-default a:hover,
+.il-default a:focus {
+	background-color:#F5F5F5;
+	box-shadow:0 0 3px grey;
+}
+
+.frame a:active,
+.il-default a:active {
+	box-shadow:inset 0 0 3px black;
+}*/
+
+/* SCREEN CELLS */
+.frame-screen {
+	position:relative;
+	width:135px;
+	height:104px;
+	
+	box-sizing : border-box;
+}
+
+.frame-screen > img {
+	width: 128px;
+	height: 96px;
+}
+
+/* DIALOGUE CELL */
+.frame-dialogue {
+	position: relative;
+	width: 260px;
+}
+
+.frame-dialogue div.textbox .dialogue {
+	border-color: #888888;
+}
+
+.frame-dialogue .textbox .name
+{
+	padding: 0;
+	overflow: visible;
+}
+
+.frame-dialogue .textbox .name > *,
+.frame-dialogue .textbox .sync > *,
+.frame-dialogue .textbox .sync > label > *
+{
+	max-height: 14px;
+	vertical-align: top;
+	
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+}
+
+.frame-dialogue .textbox .name select,
+.frame-dialogue .textbox .name .select,
+.frame-dialogue .textbox .sync select,
+.frame-dialogue .textbox .sync .select,
+.frame-dialogue .textbox .name input
+{
+	background: inherit;
+	color: inherit;
+	border: 0;
+}
+
+.frame-dialogue .textbox .sync button
+{
+	padding: 0 2px;
+}
+
+.frame-dialogue .textbox .name select,
+.frame-dialogue .textbox .name .select,
+.frame-dialogue .textbox .sync select,
+.frame-dialogue .textbox .sync .select
+{
+	width: 59px;
+	padding: 0;
+}
+
+.frame-dialogue .textbox .name input
+{
+	width: 44px;
+	padding: 0 2px;
+}
+
+.frame-dialogue .textbox .name input:focus
+{
+	box-shadow: 0 0 0 transparent;
+}
+
+.frame-dialogue .textbox .name select,
+.frame-dialogue .textbox .name .select,
+.frame-dialogue .textbox .name input
+{
+	background:rgb(84,89,145);
+}
+
+div.frame-dialogue > div.textbox > .sync
+{
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 0 2px;
+	
+	border: 0;
+	
+	font-size: 10px;
+}
+
+div.frame-dialogue > div.textbox > .sync.active
+{
+	min-width: 100px;
+	height: 15px;
+	line-height: 15px;
+	
+	border-left: 1px solid #888888;
+	/* border-bottom: 0;
+	border-radius: 3px 3px 0 0;*/
+}
+
+div.frame-dialogue > div.textbox > .sync > label
+{
+	display: inline;
+}
+
+div.frame-dialogue > div.textbox > .sync > label > *
+{
+	width: auto;
+}
+
+div.frame-dialogue .text_preview
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	height: 77px;
+	width: 260px;
+	padding: 0 5px;
+	background: inherit;
+}
+
+/* AUDIO CELL */
+.frame-audio
+{
+	padding: 0 !important;
+	margin: 0 !important;
+}
+
+.frame-audio > div 
+{
+	position: relative;
+	box-sizing : border-box;
+	width:150px;
+	height: 52px;
+	padding: 5px;
+	background: inherit;
+}
+
+.frame-audio > div > span
+{
+	display: block;
+	max-width: 100%;
+	height: 100%;
+	overflow: hidden;
+	text-align: right;
+	
+	line-height: 20px;
+}
+
+.music_cell
+{
+	border-bottom: 1px solid lightgrey;
+}
+
+.music_cell:before
+{
+	content: url(../img/music_none.png);
+}
+
+.music_cell.set:before
+{
+	content: url(../img/music.png);
+}
+
+.music_cell.stop:before
+{
+	content: url(../img/music_stop.png);
+}
+
+.sfx_cell:before
+{
+	content: url(../img/sound_none.png);
+}
+
+.sfx_cell.set:before
+{
+	content: url(../img/sound.png);
+}
+
+.music_cell:before,
+.sfx_cell:before
+{
+	float: left;
+	padding: 5px;
+}
+
+/* TIMER CELL */
+.frame-timer {
+	padding-top:45px;
+	width:50px; height:61px !important;
+	text-align:center;
+}
+
+.frame-timer input {
+	margin-top:-4px;
+	width:30px;
+	text-align:center;
+}
+
+/* ACTION CELL */
+div.frame > div.frame-action {
+	display: block;
+	position:absolute;
+	bottom: 0;
+	width: 100%;
+	height: 30px;
+	padding: 0;
+	
+	border-right: 0;
+	border-top: thin solid lightgrey;
+	
+	vertical-align: middle;
+	
+	transition: 0.2s;
+}
+
+div.frame > div.frame-action.expanded
+{
+	height: 100%;
+	overflow: auto;
+	
+	z-index: 100;
+	background: inherit;
+}
+
+div.frame > div.frame-action > .action_name
+{
+	float: left;
+	height: 30px;
+	line-height: 30px;
+	padding-left: 2px;
+}
+
+div.frame > div.frame-action.expanded > .action_name
+{
+	height: 20px;
+	padding: 5px;
+	font: large Georgia, serif;
+}
+
+div.frame > div.frame-action > .action_edit
+{
+	float: right;
+	margin: 2px;
+}
+
+div.frame > div.frame-action > .action_links
+{
+	height: 30px;
+	overflow: hidden;
+	padding: 0;
+	margin: 0;
+}
+
+div.frame > div.frame-action.expanded > .action_links
+{
+	clear: both;
+	height: auto;
+	overflow: auto;
+}
+
+div.frame > div.frame-action > .action_links > li
+{
+	display: inline-block;
+	height: 30px;
+    line-height: 30px;
+}
+
+div.frame > div.frame-action.expanded > .action_links > li
+{
+	display: block;
+}
+
+div.frame > div.frame-action > .action_links > li label
+{
+	display: inline;
+}
+
+div.frame > div.frame-action > .action_links > li label > *
+{
+	width: auto;
+}
+
+div.frame > div.frame-action > .action_links > li:after
+{
+	content: ", ";
+}
+
+div.frame > div.frame-action > .action_links > li:last-of-type:after,
+div.frame > div.frame-action.expanded > .action_links > li:after
+{
+	content: "";
+}
+
+.frame-action span { padding-left:5px; }
+
+.frame-controls 
+{ 
+	position:relative; 
+	width:150px; 
+}
+
+.frame-controls label 
+{ 
+	display:block; 
+	width: 100%;
+}
+
+.frame-controls label > *
+{
+	box-sizing: border-box;
+	max-width: 100%;
+}
+
+.frame-controls-merge {
+	position:absolute;
+	right:5px; bottom:5px; left:5px;
+}
+
+/* Mini editor */
+.frame-toolbox {
+	width: 25em;
+}
+
+/*
+STYLE FOR DRAG AND DROP 
+*/
+.frame small.draggable
+{
+	cursor: move; /* For browsers that don't support cursor grab */
+	cursor: -webkit-grab;
+	cursor: grab;
+}
+
+body.dragging *
+{
+	cursor: move !important; /* For browsers that don't support cursor grab */
+	cursor: -webkit-grabbing !important;
+	cursor: grabbing !important;
+}
+
+body.dragging .drag-source .frame
+{
+	opacity: 0.5;
+}
+
+body.dragging [drop-target="1"]:hover .insert
+{
+	font-size: 0 !important;
+	height: 50px !important;
+}
+
+body.dragging [drop-target="1"]:hover .frame
+{
+	height: 96px;
+	overflow: hidden;
+}
+
+/*
+STYLE FOR MINIEDITORS
+*/
+
+.frame-dialogue > .minieditor
+{
+	display: block;
+}
+
+/*
+STYLE FOR COMPLETE EDITORS
+*/
+
+/* Screen editor */
+div.full_editor .content-panel
+{
+	position: absolute;
+	top: 32px;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	padding: 5px;
+	overflow: auto;
+}
+
+div.full_editor .content-panel .left-panel,
+div.full_editor .content-panel .right-panel
+{
+	position: absolute;
+	top: 5px;
+	bottom: 5px;
+	padding: 0 5px;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+div.full_editor .content-panel .left-panel
+{
+	left: 0;
+	width: 258px;
+	border-right: 1px dashed #ccc;
+}
+
+div.full_editor .content-panel .right-panel
+{
+	right: 0;
+	left: 269px;
+}
+
+div.full_editor .content-panel .display_engine_screen
+{
+	border: 1px solid grey;
+	border-radius: 3px;
+}
+
+div.full_editor .content-panel ul.screen_editor_chars
+{
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+div.full_editor .content-panel .char_row
+{
+	position: relative;
+	margin: 0 0 5px;
+	padding: 5px;
+	
+	border: 1px solid lightGrey;
+	border-radius: 4px;
+	background: #F8F2ED;
+}
+
+div.full_editor .content-panel .char_row .previews
+{
+	display: block;
+	
+	margin: 0 0 5px;
+	padding: 0 0 5px;
+	overflow: hidden;
+	
+	border-bottom: 1px dashed #ccc;
+}
+
+div.full_editor .content-panel .char_row .previews:empty
+{
+	display: none;
+}
+
+div.full_editor .content-panel .char_row .previews img
+{
+	display: inline-block;
+	width: 128px;
+	height: 96px;
+	margin: 0 5px 0 0;
+	
+	border: thin solid #ccc;
+	background: white;
+}
+
+div.full_editor > div .char_row > select,
+div.full_editor > div .char_row > .select,
+div.full_editor > div .char_row > button
+{
+	width: 130px;
+	margin: 0 5px 0 0;
+	
+	vertical-align: middle;
+}
+
+/* Action editor */
+div.full_editor > div > div.root.action_params div.section div.block:only-of-type > button.delete 
+{
+	display: none;
+}
+
+
+/* 
+STYLE FOR SPECIAL ROWS
+*/
+
+/* inner rows of a panel */
+.panel-frame, .panel-row
+{
+	background:#F0E3D9;
+	border-left:1px solid #DBBCA6;
+	border-right:1px solid #DBBCA6;
+}
+
+.panel-frame
+{
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+/* header of a panel */
+.panel-header > div {
+	top: 10px;
+	height: 128px;
+	
+	box-sizing:border-box;
+	
+	border: 1px solid #DBBCA6;
+	border-bottom: 0;
+	border-radius: 4px 4px 0 0;
+	
+	background-color:#F0E3D9;
+	background-image:linear-gradient(to bottom, #DBBCA6, #F0E3D9);
+}
+
+.panel-section-header h1 
+{
+	display: inline-block;
+	float: left;
+	position: relative;
+	z-index: 1;
+	
+	width: 17%;
+	margin: 0.5%;
+	margin-right: 0;
+	padding: 0 0.25%;
+	
+	background: white;
+	border: 1px solid #DBBCA6;
+	border-radius: 4px;
+	box-shadow: inset 0 0 5px lightGrey;
+	
+	font: 16px Georgia, serif;
+	line-height: 24px;
+	color: #782201;
+}
+
+.panel-section-header h1 input {
+	font: inherit;
+	color: inherit;
+	
+	max-width: 96%;
+	margin: 0;
+	padding: 0 2%;
+	
+	border: 0;
+	border-top: 1px solid #782201;
+	background: transparent;
+	
+	text-align: center;
+}
+
+.panel-section-header h1 input:-moz-placeholder {
+	color: lightgrey;
+}
+
+.panel-section-header h1 input::-webkit-placeholder {
+	color: lightgrey;
+}
+
+.panel-section-header.last h2
+{
+	position: relative;
+	z-index: 1;
+	
+	margin: 0 5px;
+	padding:1px;
+	
+	border:thin solid #DBBCA6;
+	border-radius:4px 4px 0 0;
+	
+	background:white;
+	box-shadow:inset 0 0 5px lightgrey;
+	
+	font:1em Georgia, serif;
+	text-align:center;
+	color:#782201;
+}
+
+.panel-section-header .panel-tabs,
+.panel-section-header .panel-tab-contents
+{
+	float: right;
+	width: 80%;
+	margin-left: 0;
+	margin-right: 0.5%;
+	padding: 0;
+}
+
+.panel-section-header .panel-tabs
+{
+	margin-top: 5px;
+}
+
+.panel-section-header .panel-tab-contents
+{
+	margin-bottom: 5px;
+}
+
+.panel-section-header .panel-tab-contents + *
+{
+	clear: both;
+}
+
+.panel-section-header::before 
+{
+	content: "";
+	display: block;
+	
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	z-index: 0;
+	
+	width: 19%;
+	
+	background-image: linear-gradient(to right, transparent, transparent 49%, #DBBCA6 49.1%, #DBBCA6 50.9%, transparent 51%, transparent);
+}
+
+/* Tabs in panel header */
+.panel-tabs {
+	position: relative;
+	z-index: 1;
+	height: 23px;
+	
+	text-align: left;
+}
+
+.panel-tabs a 
+{
+	display:inline-block;
+	
+	box-sizing: border-box;
+	height: 100%;
+	margin:0 1px -1px 1px;
+	padding:0.2em 0.5em;
+	
+	border:thin solid #DBBCA6;
+	border-radius:4px 4px 0 0;
+	
+	background-color: #8C481B;
+	background-image: linear-gradient(rgba(255,255,255,0.25), rgba(255,255,255,0));
+	
+	outline:none;
+	text-decoration:none;
+	color:white !important;
+	font-size: 14px;
+	transition:0.2s;
+}
+
+.panel-tabs a:hover,
+.panel-tabs a:focus {
+	background-color:#A67351;
+}
+
+.panel-tabs a:active {
+	box-shadow:inset 0 0 3px black;
+}
+
+.panel-tabs a.open {
+	background-color:#A67351;
+	background-image:linear-gradient(#8C481B, #F0E3D9);
+	border-bottom-color:#F0E3D9;
+}
+
+.panel-tab-contents
+{
+	/* Up by 1px to hide border under tabs */
+	margin-top: -1px;
+	
+	border: 1px solid #DBBCA6;
+	border-radius: 4px;
+	background: #F0E3D9;
+}
+
+.panel-tab-contents > * {
+	display: block;
+	
+	box-sizing: border-box;
+	width: 100%;
+	height: 90px;
+	padding: 0;
+	margin: 0;
+}
+
+.panel-tab-contents.small > *
+{
+	height: 67px;
+}
+
+.panel-tab-contents > .single_opener
+{
+	display: table;
+}
+
+.panel-tab-contents > .single_opener > .button_container
+{
+	display: table-cell;
+}
+
+.panel-tab-contents > .single_opener > .button_container > button
+{
+	height: 40px;
+	margin: 25px;
+	font-size: 1.2em;
+}
+
+.panel-tab-contents.small > .single_opener > .button_container > button
+{
+	margin: 13px 25px;
+}
+
+.panel-tab-contents > .single_opener > p
+{
+	display: table-cell;
+	padding: 5px;
+	vertical-align: middle;
+}
+
+/* Panel entity list */
+ul.entity_list
+{
+	overflow-x: auto;
+	overflow-y: hidden;
+	margin: 0;
+	padding: 0;
+	
+	white-space: nowrap;
+}
+
+ul.entity_list > li 
+{
+	display: inline-block;
+	position: relative;
+	vertical-align: top;
+	height: 66px; 
+	width: 19.5%;
+	box-sizing: border-box;
+	margin: 2px 0.25%;
+	
+	white-space: normal;
+}
+
+.small ul.entity_list > li 
+{
+	height: 47px;
+}
+
+ul.entity_list > li > .insert 
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 10px;
+	padding: 0;
+	margin: 0;
+	
+	font-size: 0;
+}
+
+ul.entity_list > li > .content
+{
+	position: absolute;
+	top: 0;
+	left: 12px;
+	right: 0;
+	bottom: 0;
+	
+	padding: 2px;
+	
+	border: 1px solid #DFD796;
+	background-color: #EFE7A6;
+	
+	font-size: 14px;
+	
+	border-radius: 4px;
+}
+
+ul.entity_list > li > .content > * {
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+ul.entity_list.conversation > li > .last.insert {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 100%;
+	width: 100%;
+	font-size: 20px;
+	line-height: 1em;
+}
+
+/* Style specific to conversation list */
+
+ul.entity_list.conversation > li > .content > small + * {
+	text-indent: 10px;
+}
+
+ul.entity_list.conversation > li > .content > p.small {
+	overflow: hidden;
+	height: 26px;
+	margin: 0;
+	padding: 2px 0;
+	
+	font-size: 10px;
+	text-indent: 30px;
+}
+
+ul.entity_list.conversation > li > .content > button {
+	display: block;
+	position: absolute;
+	bottom: 2px;
+	
+	width: 48%;
+	height: 17px;
+	padding: 0;
+	
+	line-height: 1em;
+}
+ul.entity_list.conversation > li > .content > button.open {
+	left: 1%;
+}
+ul.entity_list.conversation > li > .content > button.delete {
+	right: 1%;
+}
+
+/* Footer of a panel */
+.panel-footer > div {
+	height: 140px;
+	padding:5px 0;
+	
+	background-color:#F0E3D9;
+	background-image:linear-gradient(to top, #DBBCA6, #F0E3D9);
+	
+	border:1px solid #DBBCA6;
+	border-top: 0;
+	
+	border-radius:0 0 4px 4px;
+	box-sizing:border-box;
+}
+
+.panel-heading {
+	padding:5px;
+	background:#F0E3D9;
+	border:thin solid #DBBCA6;
+	border-top-width:5px;
+	box-shadow:inset 0 0 5px #DBBCA6;
+	font:medium Georgia, serif;
+	color:#782201;
+}
+
+/* Insert link in panel*/
+.panel-header .insert,
+.panel-frame .insert
+{
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+/* Insert link in panel footer */
+section.row-section div.panel-footer a.insert
+{
+	height: 30px;
+	margin: 5px;	
+	line-height: 30px;
+	font-size: 20px;
+}
+
+/* CE statement frame */
+.statement .frame
+{
+	background-color: white;
+}
+
+/* CE pressing conv */
+.pressing_cv .frame
+{
+	background-color: #F0E3D9;
+	border: 0;
+}
+
+.pressing_cv .frame > div
+{
+	border-color: #DBBCA6;
+}
+
+/* CE optional conv */
+.optional_cv .frame
+{
+	background-color: #DDC6FB;
+	border-color: #EDB6EB;
+}
+
+.optional_cv .frame > div
+{
+	border-color: #DFD796;
+}
+
+/* Dialogue header */
+.storyboard-row > div.dialogue-header
+{
+	height: 150px;
+}
+
